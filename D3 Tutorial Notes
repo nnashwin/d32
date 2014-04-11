@@ -1,0 +1,29 @@
+D3 Tutorial Notes 
+-------------------------
+What is d3?
+
+D3.js is a way to easily manipulate data, visualize and animate data and represent it in the dom. It is recommended to use svgs with the engine, scales nicely and overall is a clean experience. D3 can really work with any element like to make an html table or any other reactive type of DOM element without the need to spin up a server. It's easier to spin up an svg without having to rely on external tools or if the svgs need to be reactive and on demand generated without having to input it into the html doc first. 
+
+Where can i find D3
+
+D3 can be found and viewed at d3js.org, at the top and at https://github.com/mbostock/d3/wiki/Gallery there are many tutorials to demonstrate the power of d3. 
+	http://bl.ocks.org/mbostock/4636377
+	http://bl.ocks.org/mbostock/1096355
+	http://bl.ocks.org/mbostock/4165404
+	http://bl.ocks.org/mbostock/1345853
+and combined with canvas:
+	http://square.github.io/cubism/
+there are many more tutorialas and code on the site and many differenet tutorials
+
+why not?
+Despite the exhastive power of D3, it does not include much more out of the box (though plugins and extentions can extend the capability) and if the browser that is trying to be targeted does not support SVGs (the main image used for d3) then it would be good to seek out another framework. (basically anything but IE8 and below).
+
+So today I'm going to run through a how-to tutorial on D3 with some simple generic stuffusiing useful functions and ending with a tutorial using a map of the US and Earthquake data from the USGS (link to raw data: http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php)
+
+An important step when reading external data documents it's important to spin up a simple server. This is to prevent xss by the browsers:
+easy instantiation is by using the following command in the terminal: python -m SimpleHTTPSever 8888 (can be any port instead of 8888) (ensure that python is installed )
+
+-------tutorial ------------------------------------------
+d3 at it's heart does a lot of selection returning. Every single function in d3 should return a pointer to what was done so it is important when chaining methods to do them in order or else something will break.
+
+
